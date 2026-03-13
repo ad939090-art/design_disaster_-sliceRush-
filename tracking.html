@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Track Order</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:linear-gradient(#fff7f0,#ffe2cc);
+text-align:center;
+}
+
+/* LOGO */
+
+.logo{
+position:absolute;
+top:15px;
+left:20px;
+background:#ff914d;
+color:white;
+padding:10px 14px;
+font-size:22px;
+font-weight:bold;
+border-radius:6px;
+}
+
+/* TITLE */
+
+.title{
+margin-top:90px;
+font-size:38px;
+color:#333;
+}
+
+/* DELIVERY CARD */
+
+.card{
+margin:40px auto;
+background:white;
+width:350px;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* ORDER INFO */
+
+.order-info{
+font-size:14px;
+color:#777;
+margin-bottom:10px;
+}
+
+/* TRACK STEPS */
+
+.steps{
+text-align:left;
+margin-top:20px;
+line-height:2;
+}
+
+/* STEP STYLE */
+
+.step{
+display:flex;
+align-items:center;
+}
+
+.circle{
+height:10px;
+width:10px;
+border-radius:50%;
+margin-right:10px;
+}
+
+.done{
+color:green;
+font-weight:bold;
+}
+
+.done .circle{
+background:green;
+}
+
+.current{
+color:#ff914d;
+font-weight:bold;
+}
+
+.current .circle{
+background:#ff914d;
+}
+
+.pending{
+color:#888;
+}
+
+.pending .circle{
+background:#ccc;
+}
+
+/* PROGRESS BAR */
+
+.progress{
+margin-top:20px;
+height:20px;
+width:100%;
+background:#ddd;
+border-radius:20px;
+overflow:hidden;
+}
+
+.bar{
+height:100%;
+width:70%;
+background:linear-gradient(to right,#ff914d,#ffb347);
+}
+
+/* DELIVERY NOTE */
+
+.note{
+margin-top:15px;
+color:#666;
+font-style:italic;
+}
+
+/* BACK BUTTON */
+
+.back{
+display:inline-block;
+margin-top:30px;
+background:#2c2c2c;
+color:white;
+padding:10px 20px;
+text-decoration:none;
+border-radius:6px;
+}
+
+.back:hover{
+background:#444;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="logo">
+SliceRush 🍕
+</div>
+
+<div class="title">
+Track Your Order 🚚
+</div>
+
+<div class="card">
+
+<h3>Order #45821</h3>
+<div class="order-info">Placed 12 minutes ago</div>
+
+<div class="steps">
+
+<div class="step done">
+<div class="circle"></div>
+✔ Order Received
+</div>
+
+<div class="step done">
+<div class="circle"></div>
+✔ Preparing Food
+</div>
+
+<div class="step current">
+<div class="circle"></div>
+🍕 Out for Delivery
+</div>
+
+<div class="step pending">
+<div class="circle"></div>
+Driver Arriving
+</div>
+
+<div class="step pending">
+<div class="circle"></div>
+Delivered
+</div>
+
+</div>
+
+<div class="progress">
+<div class="bar"></div>
+</div>
+
+<div class="note">
+Estimated arrival: 15 minutes
+</div>
+
+</div>
+
+<a class="back" href="sliceRushMain.html">⬅ Back to Home</a>
+
+</body>
+</html>

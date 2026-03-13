@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SliceRush</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:linear-gradient(#fff7f0,#ffe2cc);
+}
+
+/* HEADER */
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+background:white;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* LOGO */
+
+.logo{
+background:#ff914d;
+color:white;
+padding:8px 14px;
+font-size:22px;
+font-weight:bold;
+border-radius:6px;
+}
+
+/* NAVIGATION */
+
+.nav a{
+margin-left:20px;
+text-decoration:none;
+color:#333;
+font-weight:bold;
+}
+
+.nav a:hover{
+color:#ff914d;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:80px 20px;
+background:linear-gradient(#ff914d,#ffb347);
+color:white;
+}
+
+.hero h1{
+font-size:45px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:25px;
+}
+
+.order-btn{
+background:white;
+color:#ff914d;
+border:none;
+padding:12px 28px;
+font-size:18px;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+/* DISCOUNT STRIP */
+
+.discount-strip{
+text-align:center;
+background:#ffe8d6;
+padding:14px;
+font-size:16px;
+color:#333;
+border-top:3px solid #ff914d;
+border-bottom:3px solid #ff914d;
+font-weight:bold;
+}
+
+.coupon{
+background:#ff914d;
+color:white;
+padding:5px 12px;
+border-radius:6px;
+margin:0 6px;
+}
+
+/* MENU */
+
+.menu{
+padding:40px;
+text-align:center;
+}
+
+.grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+}
+
+.card{
+background:white;
+width:220px;
+padding:15px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card img{
+width:100%;
+height:150px;
+border-radius:8px;
+}
+
+.card h3{
+margin-top:10px;
+}
+
+.card button{
+background:#ff914d;
+color:white;
+border:none;
+padding:10px;
+margin-top:10px;
+width:100%;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+.footer{
+margin-top:50px;
+background:#2c2c2c;
+color:white;
+text-align:center;
+padding:20px;
+font-size:14px;
+}
+
+.footer p{
+margin:6px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<div class="header">
+
+<div class="logo">
+SliceRush 🍕
+</div>
+
+<div class="nav">
+<a href="#">Home</a>
+<a href="#menu">Menu</a>
+<a href="tracking.html">Track Order</a>
+<a href="coupon_code.html">Deals</a>
+<a href="#">Contact</a>
+</div>
+
+</div>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<h1>Fresh Pizza Delivered Fast</h1>
+<p>Hot meals delivered straight to your door</p>
+
+<a href="place_order.html"u">
+<button class="order-btn">Order Now</button>
+</a>
+
+</div>
+
+<!-- DISCOUNT STRIP -->
+
+<div class="discount-strip">
+🎁 Use code <span class="coupon">FASH50</span> and get 20% OFF today!
+</div>
+
+<!-- MENU -->
+
+<div class="menu" id="menu">
+
+<h2>Popular Items</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="images\Classic-Pepperonis-Pizza-Fresh-from-the-Oven.png">
+<h3>Pepperoni Pizza</h3>
+<a href="place_order.html">
+<button>Order Now</button>
+</a>
+</div>
+
+<div class="card">
+<img src="images\cheeseburger-4.jpg">
+<h3>Cheese Burger</h3>
+<a href="place_order.html">
+<button >Order Now</button>
+</a>
+</div>
+
+<div class="card">
+<img src="images\delicious-french-fries-on-a-white-background-photo.jpg">
+<h3>Fries</h3>
+<a href="place_order.html">
+<button>Order Now</button>
+</a>
+</div>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+<p>About Us | Careers | Contact | Help Center</p>
+<p>Privacy Policy | Terms & Conditions | Refund Policy</p>
+<p>Follow us: Instagram | Facebook | Twitter</p>
+<p>© 2026 SliceRush. All Rights Reserved.</p>
+
+</div>
+
+</body>
+</html>

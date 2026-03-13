@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DealDash Coupons 🎁</title>
+<style>
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:Segoe UI,sans-serif;
+  background:linear-gradient(135deg,#ff6b6b,#ffc93c);
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  padding:20px;
+}
+.logo{
+  position:fixed;
+  top:15px;
+  left:20px;
+  background:#e63946;
+  color:white;
+  padding:10px 15px;
+  border-radius:8px;
+  font-weight:bold;
+  font-size:20px;
+}
+.container{
+  background:white;
+  width:100%;
+  max-width:520px;
+  padding:25px;
+  border-radius:16px;
+  box-shadow:0 10px 35px rgba(0,0,0,0.25);
+  margin-top:80px;
+}
+h2{text-align:center;color:#e63946;margin-top:0;}
+#couponsContainer{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-bottom:15px;
+}
+.coupon-card{
+  border:2px dashed #e63946;
+  border-radius:12px;
+  padding:15px;
+  text-align:center;
+  background:#fff7f7;
+  transition:0.2s;
+  cursor:pointer;
+}
+.coupon-card:hover{transform:scale(1.02);}
+.coupon-code{font-weight:bold;font-size:18px;color:#e63946;margin:8px 0;}
+button{
+  width:100%;
+  padding:12px;
+  background:#e63946;
+  color:white;
+  border:none;
+  border-radius:10px;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.2s;
+}
+button:hover{background:#c72c3a;}
+@media(max-width:480px){
+  #couponsContainer{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<div class="logo">DealDash 🎁</div>
+
+<div class="container">
+  <h2>Choose a Coupon</h2>
+  <div id="couponsContainer"></div>
+  <button onclick="goToOrder()">Go to Order Page</button>
+</div>
+
+<script>
+// ---------- COUPONS DATA ----------
+const coupons = [
+  {name:"Pizza Fiesta",code:"PIZZA40",discount:40,minOrder:499},
+  {name:"Gadget Blast",code:"TECH20",discount:20,minOrder:1000},
+  {name:"Sweet Treats",code:"CAKE30",discount:30,minOrder:299},
+  {name:"Coffee Break",code:"COFFEE10",discount:10,minOrder:150},
+  {name:"Fashion Frenzy",code:"FASH50",discount:50,minOrder:1999}
+];
+
+let selectedCoupon = null;
+
+// ---------- RENDER COUPONS ----------
+const container = document.getElementById("couponsContainer");
+coupons.forEach((coupon, i)=>{
+  const div = document.createElement("div");
+  div.className = "coupon-card";
+  div.id = "coupon-"+i;
+  div.onclick = ()=>selectCoupon(i);
+  div.innerHTML = `<div><b>${coupon.name}</b></div>
+                   <div class="coupon-code">${coupon.code}</div>
+                   <div>${coupon.discount}% OFF on orders above ₹${coupon.minOrder}</div>`;
+  container.appendChild(div);
+});
+
+// ---------- SELECT COUPON ----------
+function selectCoupon(index){
+  coupons.forEach((_,i)=>{
+    document.getElementById("coupon-"+i).style.borderColor="#e63946";
+  });
+  selectedCoupon = coupons[index];
+  document.getElementById("coupon-"+index).style.borderColor="#2a9d8f";
+}
+
+// ---------- GO TO ORDER PAGE WITH COUPON ----------
+function goToOrder(){
+  if(!selectedCoupon){
+    alert("Please select a coupon first!");
+    return;
+  }
+  // Redirect to SliceRush page with coupon in URL
+  window.location.href = `place_order.html?coupon=${selectedCoupon.code}`;
+}
+</script>
+
+</body>
+</html>
